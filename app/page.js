@@ -6,7 +6,9 @@ export default function RootPage(){
           <h1>CPRG 306: Web Development 2 - Assignments</h1>
           <p>
             <Link href="./week-2">Go to week 2</Link> &rarr; 
-            <Link href="./week-3">Go to week 3</Link></p>
+            <Link href="./week-3">Go to week 3</Link> &rarr; 
+            <Link href="./week-4">Go to week 4</Link>
+            </p>
           
         </main>
   )
