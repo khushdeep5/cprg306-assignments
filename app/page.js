@@ -7,7 +7,8 @@ export default function RootPage(){
           <p>
             <Link href="./week-2">Go to week 2</Link> &rarr; 
             <Link href="./week-3">Go to week 3</Link> &rarr; 
-            <Link href="./week-4">Go to week 4</Link>
+            <Link href="./week-4">Go to week 4</Link> &rarr; 
+            <Link href="./week-5">Go to week 5</Link> 
             </p>
           
         </main>
