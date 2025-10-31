@@ -10,7 +10,7 @@ async function fetchMealIdeas(ingredient) {
     const data = await response.json();
     return data.meals || [];
   } catch (error) {
-    console.error("Error fetching meal ideas:", error);
+    console.error('Error fetching meal ideas:', error);
     return [];
   }
 }
@@ -34,7 +34,7 @@ export default function MealIdeas({ ingredient }) {
   return (
     <div className="p-6 text-center">
       <h2 className="text-2xl font-bold mb-4 text-white">
-        Meal ideas for "{ingredient}"
+        Meal ideas for {ingredient}
       </h2>
       {meals.length === 0 ? (
         <p className="text-gray-300">No meal ideas found.</p>
