@@ -42,11 +42,7 @@ export default function MealIdeas({ ingredient }) {
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {meals.map((meal) => (
             <li key={meal.idMeal} className="bg-gray-800 text-white rounded-lg shadow-md p-4">
-              <img
-                src={meal.strMealThumb}
-                alt={meal.strMeal}
-                className="rounded-lg mb-2 w-full h-40 object-cover"
-              />
+              {}
               <p className="font-semibold">{meal.strMeal}</p>
             </li>
           ))}
