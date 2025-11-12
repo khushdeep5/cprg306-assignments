@@ -25,15 +25,15 @@ export default function LandingPage() {
 
   return (
     <main className="flex justify-center items-center h-screen">
-      <div>
+      <div >
         {user ? (
-          <div>
-            <p>
+          <div className="flex flex-col items-center">
+            <p className="text-4xl font-bold mb-4">
               Welcome, <strong>{user.displayName}</strong> ({user.email})
             </p>
             <button
               onClick={handleSignOut}
-              className="text-lg m-2 hover:underline bg-blue-500"
+              className="text-lg bg-blue-500 px-4 py-2 rounded-xl hover:bg-blue-600 transition"
             >
               Logout
             </button>
@@ -46,7 +46,7 @@ export default function LandingPage() {
             </Link>
           </div>
         ) : (
-         <div className="flex flex-col items-center">
+         <div className="flex flex-col items-center justify-center">
               <h1 className="text-4xl font-bold mb-4">Welcome to the application</h1>
               <button
                 onClick={handleSignIn}
