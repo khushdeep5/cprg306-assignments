@@ -1,8 +1,7 @@
-/* eslint-disable react/no-unescaped-entities */
+
 "use client";
 import React, { useState, useEffect } from "react";
 
-// Fetch data from TheMealDB API
 async function fetchMealIdeas(ingredient) {
   try {
     const response = await fetch(
