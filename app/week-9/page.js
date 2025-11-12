@@ -33,7 +33,7 @@ export default function LandingPage() {
             </p>
             <button
               onClick={handleSignOut}
-              className="text-lg m-2 hover:underline"
+              className="text-lg m-2 hover:underline bg-blue-500"
             >
               Logout
             </button>
@@ -46,15 +46,15 @@ export default function LandingPage() {
             </Link>
           </div>
         ) : (
-          <div>
-            <h1 className="text-4xl font-bold">Welcome</h1>
-            <button
-              onClick={handleSignIn}
-              className="text-lg m-2 hover:underline"
-            >
-              Login with GitHub
-            </button>
-          </div>
+         <div className="flex flex-col items-center">
+              <h1 className="text-4xl font-bold mb-4">Welcome to the application</h1>
+              <button
+                onClick={handleSignIn}
+                className="text-lg bg-blue-500 px-4 py-2 rounded-xl hover:bg-blue-600 transition"
+                >
+                Login with GitHub
+              </button>
+</div>
         )}
       </div>
     </main>
