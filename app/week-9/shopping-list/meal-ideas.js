@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 import React, { useState, useEffect } from "react";
 
@@ -10,11 +11,10 @@ async function fetchMealIdeas(ingredient) {
     const data = await response.json();
     return data.meals || [];
   } catch (error) {
-    console.error('Error fetching meal ideas:', error);
+    console.error("Error fetching meal ideas:", error);
     return [];
   }
 }
-
 
 export default function MealIdeas({ ingredient }) {
   const [meals, setMeals] = useState([]);
@@ -29,7 +29,11 @@ export default function MealIdeas({ ingredient }) {
   }, [ingredient]);
 
   if (!ingredient) {
-    return <p className="text-center text-gray-300">Select an item to see meal ideas.</p>;
+    return (
+      <p className="text-center text-gray-300">
+        Select an item to see meal ideas.
+      </p>
+    );
   }
 
   return (
@@ -42,8 +46,10 @@ export default function MealIdeas({ ingredient }) {
       ) : (
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {meals.map((meal) => (
-            <li key={meal.idMeal} className="bg-gray-800 text-white rounded-lg shadow-md p-4">
-              {}
+            <li
+              key={meal.idMeal}
+              className="bg-gray-800 text-white rounded-lg shadow-md p-4"
+            >
               <p className="font-semibold">{meal.strMeal}</p>
             </li>
           ))}
